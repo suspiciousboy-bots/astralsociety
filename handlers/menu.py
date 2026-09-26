@@ -7,7 +7,7 @@ from config import (
 from keyboards.main_menu import main_menu_kb, back_kb
 from keyboards.games_kb import game_lb_menu_kb
 from utils.database import get_balance
-from utils.ui import smart_edit   # 👈 ADD
+from utils.ui import smart_edit
 
 router = Router()
 
@@ -19,7 +19,7 @@ async def back_to_main(cb: CallbackQuery):
         f"ᴡєʟᴄσϻє тσ <b>{BOT_NAME}</b> 🌌\n\n"
         f"ᴄнσσsє ᴧη σᴩᴛiση вєʟσᴡ 👇"
     )
-    await smart_edit(cb, text, main_menu_kb())   # 👈 CHANGED
+    await smart_edit(cb, text, main_menu_kb())
     await cb.answer()
 
 
